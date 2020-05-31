@@ -1,0 +1,39 @@
+{
+  "Override" : false,
+  "EditConfig" :
+  [
+    { "vcxproj_path" : "path/to/vcxproj",
+      "vcxproj_item" :
+      [
+        {
+          "NodePath" : "Project/ItemDefinitionGroup/Link/GenerateDebugInformation",
+          "Node" : 
+            {
+              "Project" : null,
+              "ItemDefinitionGroup" : 
+              {
+                "Attribute" : 
+                {
+                  "Condition" : "'$(Configuration)|$(Platform)'=='Release|x64'"
+                }
+              }
+              ,
+              "Link" : null,
+              "GenerateDebugInformation" :
+              {
+                "Value" : "true"
+              }
+            }
+        }
+      ]
+    },
+    { "vcxproj_path" : "path/to/vcxproj",
+      "vcxproj_item" : 
+      [
+        {
+
+        }
+      ]
+    }
+  ]
+}

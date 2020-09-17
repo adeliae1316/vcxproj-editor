@@ -36,9 +36,14 @@ def edit_xml(path, config):
         return 1
 
     for item in edit_config:
-        for elem in root.findall(item['NodePath'], namespaces=namespaces):
+        node_path = '.'
+        for node_name in item['NodePath'].split('/'):
+            node_path += '/{{{0}}}{1}'.format(ns, node_name)
+        for elem in root.findall(node_path, namespaces=namespaces):
             print('  {}'.format(item['NodePath']))
             before_text = elem.text
+            if len(before_text) == 0:
+                before_text = 'None'
             elem.text = item['Value']
             print('    {0} -> {1}'.format(before_text, elem.text))
 

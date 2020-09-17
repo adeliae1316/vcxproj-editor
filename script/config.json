@@ -1,0 +1,14 @@
+{
+    "vcxproj_path" : [
+        "/path/to/test.vcxproj"
+    ],
+    "vcxproj_root" : "Project",
+    "vcxproj_ns" : "http://schemas.microsoft.com/developer/msbuild/2003",
+    "edit_config" : [
+        {
+            "Comment" : "NodePath must be set as a relative path.",
+            "NodePath" : "ItemDefinitionGroup/Link/GenerateDebugInformation",
+            "Value" : "true"
+        }
+    ]
+}

@@ -1,4 +1,4 @@
-# vcxproj_editor
+# vcxproj-editor
 
 ## description
 
